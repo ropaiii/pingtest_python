@@ -17,12 +17,13 @@ def pingtest_run(ip : str) -> bool:
 
 
 def main(filename : str) -> None:
-    successip : list = list()
-    failsip : list = list()
+
 
     try:
         with open(filename, "r") as file:
             ipadresslist : list = [line.strip() for line in file if line.strip()]
+            successip: list = list()
+            failsip: list = list()
 
         if not ipadresslist:
             print("No IP-adresses found!!!!")
